@@ -7,14 +7,18 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue-3/dist/bootstrap-vue-3.css'
 import router from './router'
 
+// componentes reutilizaveis da storyblok
 import Page from './components/storyblok/Page.vue'
-import ColunaMain from './components/storyblok/ColunaMain.vue'
 import ColunaJogos from './components/storyblok/ColunaJogos.vue'
-import CardJogo from './components/storyblok/CardJogo.vue'
 import Conteudo from './components/storyblok/Conteudo.vue'
 import Section from './components/storyblok/Section.vue'
 import Nav from './components/storyblok/Nav.vue'
 import Link from './components/storyblok/Link.vue'
+
+// componentes da pasta Home
+import ColunaMain from './components/Home/Storyblok/ColunaMain.vue'
+import CardJogo from './components/Home/Storyblok/CardJogo.vue'
+
 
 const app = createApp(App)
 app.use(router)
