@@ -5,47 +5,57 @@
             <div v-for="jogo in currentJogos" :key="jogo._uid">
                 <StoryblokComponent :blok="jogo" />
             </div>
-            <b-pagination
-                v-model="currentPage"
-                :total-rows="totalJogos"
-                :per-page="perPage"
+            <Pagination
+                v-if="exibirPagination"
+                :per-page="pagination.perPage" 
+                :total-jogos="totalJogos"
                 aria-controls="my-list"
-            ></b-pagination>
+                @pegar-jogos="pegarJogos"
+            />
         </div>
     </b-col>
 </template>
 
 <script>
+import Pagination from "./Pagination.vue"
+
 export default {
     props: {
         blok: {
             type: Object,
             default: () => {}
-        }
+        },
     },
+    components: { Pagination },
     data() {
         return {
-            perPage: 3,
-            currentPage: 1,
             currentJogos: [],
         }
-    },
+    }, 
     computed: {
+        listaJogos() {
+            return this.blok.conteudo[0]
+        },
+        pagination() {
+            return this.blok.conteudo[1]
+        },
+        exibirPagination() {
+            return this.pagination.exibir
+        },
         totalJogos() {
-            return this.blok.jogos.length
+            return this.listaJogos.jogos.length
         },
     },
     mounted() {
-        this.currentJogos = this.blok.jogos.slice(0, this.perPage)
+        this.currentJogos = this.listaJogos.jogos.slice(0, this.pagination.perPage)
     },
-    watch: {
-        currentPage(paginaAtual) {
-            const inicio = this.perPage * paginaAtual - this.perPage
-            const fim = this.perPage * paginaAtual
-            this.currentJogos = this.blok.jogos.slice(inicio, fim)
+    methods: {
+        pegarJogos(inicio, fim) {
+            this.currentJogos = this.listaJogos.jogos.slice(inicio, fim)
         },
     },
-}
+
+}    
 </script>
 
 <style>
@@ -58,10 +68,10 @@ export default {
         color: #FFF;
         width: 100%;
         border-radius: 20px;
+        padding: 10px;
     }
 
     .col {
-        padding: 0;
         margin: 8px;
     }
 </style>

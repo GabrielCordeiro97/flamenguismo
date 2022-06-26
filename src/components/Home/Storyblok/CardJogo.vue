@@ -28,6 +28,8 @@ defineProps({ blok: Object })
   background-repeat: no-repeat;
   overflow: hidden;
   margin-top: 10px;
+  margin-bottom: 10px;
+  
 }
 .vitoria { 
   border: 6px solid rgb(0, 250, 0);
