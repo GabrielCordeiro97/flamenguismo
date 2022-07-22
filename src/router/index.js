@@ -3,7 +3,7 @@ import Home from "../components/Home/Home.vue";
 import Noticias from "../components/Noticias.vue"
 import Historia from "../components/Historia/Historia.vue";
 import Equipe from "../components/Equipe.vue"
-import Jogos from "../components/Jogos.vue"
+import Jogos from "../components/Jogos/Jogos.vue"
 
 const routes = [
   {

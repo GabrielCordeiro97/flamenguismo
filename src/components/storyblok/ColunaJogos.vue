@@ -26,7 +26,9 @@ export default {
             default: () => {}
         },
     },
-    components: { Pagination },
+    components: { 
+        Pagination 
+    },
     data() {
         return {
             currentJogos: [],
@@ -41,13 +43,20 @@ export default {
         },
         exibirPagination() {
             return this.pagination.exibir
+            // EXIBE O MENU DE PAGINAÇAO NA COLUNA JOGOS
         },
         totalJogos() {
             return this.listaJogos.jogos.length
         },
     },
     mounted() {
-        this.currentJogos = this.listaJogos.jogos.slice(0, this.pagination.perPage)
+        if (this.exibirPagination) {
+            this.currentJogos = this.listaJogos.jogos.slice(0, this.pagination.perPage)
+        }else{
+            this.currentJogos = this.listaJogos.jogos
+        }
+        // SE A PAGINAÇAO ESTA ATIVA EXIBE SOMENTE OS ELEMENTOS QUE SAO DESEJADOS POR PAGINA
+        // E TAMBEM O MENU DE PAGINAÇAO. SE NAO EXIBE TODA A LISTA
     },
     methods: {
         pegarJogos(inicio, fim) {

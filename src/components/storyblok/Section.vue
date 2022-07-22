@@ -1,31 +1,21 @@
 <template>
-<section :id="blok.id" class="capitulo" :class="`fundo-${blok.fundo}`">
-    <h3 class="capitulo__title">{{ blok.titulo }}</h3>
-    <p class="capitulo__text" v-html="richtext"></p>
-</section>
+    <section :id="blok.id" class="capitulo" :class="`fundo-${blok.fundo}`">
+        <h3 class="capitulo__title">{{ blok.titulo }}</h3>
+        <Richtext :texto="blok.texto"/>
+    </section>
 </template>
 
 <script>
-import RichTextResolver from 'storyblok-js-client/source/richTextResolver'
-import { computed } from 'vue'
+import Richtext from './Richtext.vue';
 
 export default {
     props: {
         blok: {
             type: Object,
-            default: () => {}
+            default: () => { }
         }
     },
-    setup(props) {
-        const richtext = computed(() => {
-            const resolver = new RichTextResolver();
-            return resolver.render(props.blok.texto)
-        })
-
-        return {
-            richtext,
-        }
-    },
+    components: { Richtext }
 }
 </script>
 

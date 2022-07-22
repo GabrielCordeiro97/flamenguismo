@@ -2,7 +2,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import BootstrapVue3 from 'bootstrap-vue-3'
 import { StoryblokVue, apiPlugin } from '@storyblok/vue'
+import Multiselect from 'vue-multiselect'
 
+import 'vue-multiselect/dist/vue-multiselect.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue-3/dist/bootstrap-vue-3.css'
 import router from './router'
@@ -19,6 +21,10 @@ import Link from './components/storyblok/Link.vue'
 import ColunaMain from './components/Home/Storyblok/ColunaMain.vue'
 import CardJogo from './components/Home/Storyblok/CardJogo.vue'
 
+// componentes da pasta Jogos
+import Temporadas from './components/Jogos/Storyblok/Temporadas.vue'
+
+
 
 const app = createApp(App)
 app.use(router)
@@ -30,6 +36,7 @@ app.use(StoryblokVue, {
   use: [apiPlugin],
 });
 
+app.component('multiselect', Multiselect)
 app.component("ColunaMain", ColunaMain)
 app.component("ColunaJogos", ColunaJogos)
 app.component("CardJogo", CardJogo)
@@ -38,3 +45,5 @@ app.component("Conteudo", Conteudo)
 app.component("Section", Section)
 app.component("Nav", Nav)
 app.component("Link", Link)
+app.component("Temporadas", Temporadas)
+

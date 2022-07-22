@@ -4,6 +4,7 @@
         :total-rows="totalJogos"
         :per-page="perPage"
         :aria-controls="ariaControls"
+        limit="3"
     ></b-pagination>
 </template>
 
@@ -22,7 +23,7 @@ export default {
         ariaControls: {
             type: String,
             default: "",
-        }
+        },
     },
     data() {
         return {
@@ -38,3 +39,13 @@ export default {
     },
 }
 </script>
+
+<style>
+.page-link {
+    color: red;
+}
+.page-item.active .page-link{
+    background-color: darkred;
+    border-color: red;
+}
+</style>

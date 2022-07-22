@@ -1,16 +1,17 @@
 <template>
-<article class="card" :class="{ 'vitoria': blok.vitoria,
-                                'empate': blok.empate,
-                                'derrota': blok.derrota }" 
-                      :style="`background-image: url(${blok.foto.filename})`">
-  <div class="card__content">
-    <h3 class="card__title">{{ blok.mandante }} x {{ blok.visitante }}</h3>
-    <span class="card__subtitle">
-      {{ blok.resultado_mandante }} - {{ blok.resultado_visitante }}
-    </span>
-    <p class="card__description">{{ blok.descricao }}</p>
-  </div>
-</article>
+  <article
+    class="card" 
+    :class="blok.status" 
+    :style="`background-image: url(${blok.foto.filename})`"
+  >
+    <div class="card__content">
+      <h3 class="card__title">{{ blok.mandante }} x {{ blok.visitante }}</h3>
+      <span class="card__subtitle">
+        {{ blok.resultado_mandante }} - {{ blok.resultado_visitante }}
+      </span>
+      <p class="card__description">{{ blok.descricao }}</p>
+    </div>
+  </article>
 </template>
 
 <script setup>
