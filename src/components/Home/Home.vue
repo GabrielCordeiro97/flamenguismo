@@ -17,8 +17,4 @@ const story = await useStoryblok('home', { version: 'draft' });
 .home {
     background-color: rgb(46, 45, 45);
 }
-/* 
-.home .coluna-jogos {
-
-} */
 </style>

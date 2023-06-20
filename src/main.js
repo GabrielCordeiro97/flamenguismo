@@ -20,6 +20,7 @@ import Link from './components/storyblok/Link.vue'
 // componentes da pasta Home
 import ColunaMain from './components/Home/Storyblok/ColunaMain.vue'
 import CardJogo from './components/Home/Storyblok/CardJogo.vue'
+import Carrossel from './components/Home/Storyblok/Carrossel.vue'
 
 // componentes da pasta Jogos
 import Temporadas from './components/Jogos/Storyblok/Temporadas.vue'
@@ -46,4 +47,5 @@ app.component("Section", Section)
 app.component("Nav", Nav)
 app.component("Link", Link)
 app.component("Temporadas", Temporadas)
+app.component("Carrossel", Carrossel)
 

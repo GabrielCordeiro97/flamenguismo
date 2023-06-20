@@ -224,7 +224,7 @@ export default {
     background-repeat: no-repeat;
     width: 325px;
     height: 325px;
-    background-size: cover;
+    background-size: 100% 100%;
     margin-right: 10px;
     border-radius: 10px;
 }

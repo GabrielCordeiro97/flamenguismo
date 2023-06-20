@@ -4,7 +4,7 @@
         :total-rows="totalJogos"
         :per-page="perPage"
         :aria-controls="ariaControls"
-        limit="3"
+        :limit="3"
     ></b-pagination>
 </template>
 
