@@ -1,13 +1,10 @@
 <template>
     <section :id="blok.id" class="capitulo" :class="`fundo-${blok.fundo}`">
         <h3 class="capitulo__title">{{ blok.titulo }}</h3>
-        <!-- <Richtext :texto="blok.texto"/> -->
     </section>
 </template>
 
 <script>
-import Richtext from './Richtext.vue';
-
 export default {
     props: {
         blok: {
@@ -15,7 +12,6 @@ export default {
             default: () => { }
         }
     },
-    components: { Richtext }
 }
 </script>
 
