@@ -1,1 +1,1 @@
-export { default } from "file:///C:/Users/corde/Downloads/fariacc.github.io-master/fariacc.github.io-master/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
+export { default } from "file:///C:/Users/corde/OneDrive/%C3%81rea%20de%20Trabalho/flamenguismo2/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
