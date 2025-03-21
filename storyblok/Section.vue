@@ -1,7 +1,7 @@
 <template>
     <section :id="blok.id" class="capitulo" :class="`fundo-${blok.fundo}`">
         <h3 class="capitulo__title">{{ blok.titulo }}</h3>
-        <Richtext :texto="blok.texto"/>
+        <!-- <Richtext :texto="blok.texto"/> -->
     </section>
 </template>
 
