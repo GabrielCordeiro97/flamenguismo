@@ -1,0 +1,1 @@
+export { default } from "file:///C:/Users/corde/Downloads/fariacc.github.io-master/fariacc.github.io-master/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"

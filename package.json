@@ -1,0 +1,26 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "set NODE_TLS_REJECT_UNAUTHORIZED=0 && nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "nuxt": "^3.8.2",
+    "sass": "^1.69.5",
+    "vue": "^3.3.10",
+    "vue-router": "^4.2.5",
+    "vue3-runtime-template": "^1.0.2"
+  },
+  "dependencies": {
+    "@storyblok/nuxt": "^6.0.0",
+    "bootstrap": "5.2.0",
+    "bootstrap-vue-3": "0.1.21",
+    "vue-multiselect": "3.0.0-alpha.2"
+  }
+}
