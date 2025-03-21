@@ -13,10 +13,6 @@ export default defineNuxtConfig({
   components: {
     dirs: [
       {
-        path: '~/components',
-        global: true,
-      },
-      {
         path: '~/storyblok',
         global: true,
       },
